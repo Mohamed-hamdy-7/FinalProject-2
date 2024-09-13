@@ -6,6 +6,7 @@
 
 body{
     height: auto;
+    overflow-x: hidden;
 }
 
 
@@ -14,7 +15,7 @@ body{
 /* ================================================================================================= */
 .section1{
     height: 100vh;
-    background-color: #0E1D34;
+    background-color: #0e1d34;
     background-image: url('../img/hero-bg.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -22,10 +23,11 @@ body{
 }
 
 .section1 .navbar{
-    position: fixed;
     top: 0px;   
-    /* width: 90%; */
-    background-color: rgb(14, 29, 52);
+    background-color: rgba(52, 14, 14, 0.009);
+    position: fixed;
+    opacity: 0.9;
+    z-index: 500;
 }
 .section1_title{
     font-size: 45px;
@@ -33,7 +35,7 @@ body{
 .section1 .nav-item{
     display: flex;
     align-items: center;
-    margin: 0px 12px;
+    margin: 0px 12px ;
 }
 
 #inputPassword2:focus{
@@ -51,7 +53,7 @@ body{
 }
 
 
-/* table */
+/* ------- tablet ----------- */
 @media (max-width : 768px) {
     .section1 {
         height: auto;
@@ -120,7 +122,6 @@ body{
 .section3 .title{
     width: 100%;
     height: 85px;
-    /* background-color: gray; */
     position: relative;
     display: flex;
     justify-content: center;
@@ -128,7 +129,7 @@ body{
 }
 .section3 .title .background{
 
-        /* background-color: green; */
+        
         position: absolute;
         transform: scale(1.3 ,1.5);
         color: rgb(173, 171, 171);
@@ -147,8 +148,7 @@ body{
 
 }
 
-.section3 .title .underline
-{
+.section3 .title .underline{
     width: 80px;
     height: 6px;
     background-color: #0D6EFD;
@@ -161,14 +161,16 @@ body{
     justify-content: center;
     margin-right: 0px;
     margin-left: 0px;
+    overflow: hidden;
 }
 
 .section3 .row .card{
     width: 18rem !important;
+    overflow: hidden;
 }
 
 .section3 .row .card:hover img {
-    transform: scale(1.1);
+    transform: scale(1.15);
     transition: all 0.2s ease-in-out;
     overflow: hidden !important;
     transform-origin:center;
@@ -177,7 +179,11 @@ body{
 .section3 .row .card{
     cursor: pointer;
 }
-/* table */
+
+
+
+
+/* ----------------- tablet --------------- */
 @media (max-width : 768px) {
     .section3 .row .card{
         width: 20rem !important;
@@ -186,7 +192,7 @@ body{
 }
 
 
-/* -----------------------call to action---------------------------------------------------- */
+/* =============================v call to action ===========================*/
 
 .section3_calltoaction{
     height: 75vh;
@@ -204,12 +210,38 @@ body{
     background-color: #0e1d34a2;
     color: white;
 
-    padding: 100px 5px;
+    padding: 20px 5px;
     text-align:  center;
 
 }
 
+@media (max-width : 768px) {
+    .section3_calltoaction .layout .my-5{
+        margin-top: 10px;
+        margin-bottom: 16px;
+        width: 100%;
 
+}
+}
+
+@media (min-width : 768px) {
+    .section3_calltoaction .layout .my-3{
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        
+
+}
+.section3_calltoaction .layout p{
+    width: 50%;
+}
+.section3_calltoaction .layout h1{
+   margin-top: 5erm; 
+   display: flex;
+   justify-content: center; 
+    align-items: center;
+    text-align: center;
+}
+}
 
 /* ================================================================================================= */
 /* ============= end call to action  =================================================================== */
@@ -219,10 +251,56 @@ body{
 
 
 
-/* ----------- container features --------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================================================================================= */
+/* ============= Features  =================================================================== */
+/* ================================================================================================= */
+
+
 .section-features {
-    /* display: flex; */
-     /* flex-wrap: wrap; */
+   
+}
+
+.section-features .container .feature1, .feature2, .featyre3, .feature4{
+    width: 100%;
+}
+
+
+
+.section-features .container img{
+    border-radius: 20%;
+}
+
+
+
+
+
+/*
+.section-features {
+    display: flex; 
+    flex-wrap: wrap; 
     justify-content:  space-between;
     align-items:center;
 }
@@ -231,7 +309,7 @@ body{
     justify-items: end;
     align-items: end;
     align-content: end;
-} */
+}
 
 .section-features .container .feature1{
     display: flex;
@@ -240,7 +318,7 @@ body{
 .section-features .container .feature1 .img1 img{
    
     transform: scale(0.8);
-    /* width: 100%;  */
+    width: 100%; 
     position: relative;
     
 }
@@ -256,11 +334,15 @@ body{
 }
 .section-features .container .text1,.text2 {
     width: 45%;
-    /* height: 400px; */
-    /* margin-top: 85px; */
+    height: 400px;
+    margin-top: 85px;
     margin-left: 20px;
 }
 
+
+
+
+/*
 .section-features .container .img2 {
     transform: scale(0.8);
     width: 50%; 
@@ -275,6 +357,10 @@ body{
 .section-features .container img{
     border-radius: 40%;
 }
+
+
+
+*/
 /* ================================================================================================= */
 /* ============= start section 4 Pricing=================================================================== */
 /* ================================================================================================= */
